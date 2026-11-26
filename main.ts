@@ -20,7 +20,7 @@ if (clause.length === 0 || clause.length > 200) {
 }
 
 const outDir =
-  process.env.MAKEFUN_BOT_DIR || process.env.MAKEFUN_OUTPUT_DIR || "output";
+  process.env.MAKEFUN_OUTPUT_DIR || process.env.MAKEFUN_BOT_DIR || "output";
 
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "clause.txt"), clause + "\n", "utf8");
